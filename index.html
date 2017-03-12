@@ -1,509 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>皮卡丘</title>
-
 <head>
     <meta charset="UTF-8">
-    <title>test3.2</title>
-    <style>
-        body{
-            margin: 0;
-        }
-        #view {
-            width: 500px;
-            height: 500px;
-            margin: 100px auto 0px auto;
-            background: ;
-            position: relative;
-        }
-        /*头*/
-        #head {
-            width: 200px;
-            height: 180px;
-            margin: auto;
-            background: #DAA520;
-            position: absolute;
-            top: -40px;
-            left: 26%;
-            border-top-left-radius: 47% 47%;
-            border-top-right-radius: 47% 47%;
-            border-bottom-left-radius: 47% 47%;
-            border-bottom-right-radius: 47% 47%;
-            border: 12px solid #844200;
-        }
-        /*身体*/
-        #body {
-            width: 80px;
-            height: 40px;
-            background: #DAA520;
-            position: absolute;
-            top: 30%;
-            left: 39%;
-            border-bottom-left-radius: 45% 70%;
-            border-bottom-right-radius: 45% 70%;
-            border-top-left-radius: 30% 90%;
-            border-top-right-radius: 30% 90%;
-            border: 12px solid #844200;
-        }
-        /*左耳朵*/
-        .ear_left {
-            width: 50px;
-            height: 50px;
-            background-color:#FFFACD;
-            border-radius: 50px;
-            border: 12px solid #844200;
-            position: absolute;
-            left: 310px;
-        }
-        /*右耳朵*/
-        .ear_right {
-            width: 50px;
-            height: 50px;
-            background-color:#FFFACD;
-            border-radius: 50px;
-            border: 12px solid #844200;
-            position: absolute;
-            left: 100px;
-        }
-        /*右耳朵黑色阴影*/
-        .ear_shading_right {
-            width: 30px;
-            height: 30px;
-            background-color:#DAA520;
-            border-radius: 50px;
-            position: absolute;
-            left: 330px;
-            top: 20px;
-        }
-        /*左耳朵黑色阴影*/
-        .ear_shading_left {
-            width: 30px;
-            height: 30px;
-            background-color:#DAA520;
-            border-radius: 50px;
-            position: absolute;
-            top: 20px;
-            left: 120px;
-        }
-        /*左脸蛋*/
-        .face_left {
-            width: 30px;
-            height: 30px;
-            background-color: #FFB5B5;
-            border-radius: 70%  30%;
-            position: absolute;
-            top:100px;
-            left: 10px;
-            z-index: 4;
-            float: left;
-            transform: rotate(40deg);
-        }
-        /*右脸蛋*/
-        .face_right {
-            width: 30px;
-            height: 30px;
-            background-color: #FFB5B5;
-            border-radius: 70%  30%;
-            position: absolute;
-            top:100px;
-            left: 160px;
-            z-index: 4;
-            float: right;
-            overflow: hidden;
-            transform: rotate(40deg);
-        }
-        /*右眼睛*/
-        .eye_right {
-            width: 65px;
-            height: 65px;
-            background-color: #000;
-            border-radius: 50%;
-            position: absolute;
-            left: 13px;
-            top: 40px;
-            overflow: hidden;
-            z-index: 2;
-        }
-        /*右眼白*/
-        .eye_shading_right {
-            width: 30px;
-            height: 30px;
-            background-color: #fff;
-            border-radius: 50%;
-            position: absolute;
-            left: 11px;
-            top: 5px;
-        }
-        .eye_shading_right:before{
-            content: "";
-            width: 15px;
-            height: 15px;
-            background-color: #fff;
-            border-radius: 50%;
-            position: absolute;
-            left: 33px;
-            top: 15px;
-        }
-        .eye_shading_right:after{
-            content: "";
-            width: 15px;
-            height: 15px;
-            background-color: #fff;
-            border-radius: 50%;
-            position: absolute;
-            left: 15px;
-            top: 40px;
-        }
-        /*左眼睛*/
-        .eye_left {
-            width: 65px;
-            height: 65px;
-            background-color: #000;
-            border-radius: 50%;
-            position: absolute;
-            left: 125px;
-            top: 40px;
-            z-index: 2;
-            overflow: hidden;
-        }
-        /*左眼白*/
-        .eye_shading_left {
-            width: 30px;
-            height: 30px;
-            background-color: #fff;
-            border-radius: 50%;
-            position: absolute;
-            left: 5px;
-            top: 7px;
-        }
-        .eye_shading_left:before{
-            content: "";
-            width: 15px;
-            height: 15px;
-            background-color: #fff;
-            border-radius: 50%;
-            position: absolute;
-            left: 38px;
-            top: 18px;
-        }
-        .eye_shading_left:after{
-            content: "";
-            width: 15px;
-            height: 15px;
-            background-color: #fff;
-            border-radius: 50%;
-            position: absolute;
-            left: 27px;
-            top: 40px;
-        }
-        /*鼻子*/
-        .nose {
-            width: 15px;
-            height: 10px;
-            background-color: #000;
-            border-radius: 50%;
-            left: 73px;
-            top: 88px;
-            position: absolute;
-            overflow: hidden;
-        }
-        /*嘴巴右*/
-        .mouth_right {
-            width: 120px;
-            height: 120px;
-            background: #FFFACD;
-            position: absolute;
-            top: 30px;
-            left: 72px;
-            border-radius: 50%;
-            border: 3px solid #FFFACD;
-        }
-        /*嘴巴左*/
-        .mouth_left {
-            width: 120px;
-            height: 120px;
-            background: #FFFACD;
-            position: absolute;
-            top: 30px;
-            left: 7px;
-            border-radius: 50%;
-            border: 3px solid #FFFACD;
-        }
-        .mouth_left:after{
-            content: "";
-            width: 170px;
-            height: 120px;
-            background: #FFFACD;
-            position: absolute;
-            top: 10px;
-            left: 5px;
-            border-radius: 50%;
-            border: 3px solid #FFFACD;
-        }
-        /*舌头*/
-        .tongue {
-            width: 80px;
-            height: 30px;
-            background: #FFB5B5;
-            position: absolute;
-            top: 110px;
-            left: 60px;
-            border-bottom-left-radius: 40% 90%;
-            border-bottom-right-radius: 40% 90%;
-            border: 3px solid #844200;
-            border-top-color: #844200;
-            -webkit-animation:tongue 1s ease-in-out infinite;
-            animation:tongue 1s ease-in-out infinite;
-        }
-        /*左胳膊*/
-        .arm_left {
-            width: 20px;
-            height: 20px;
-            background: #DAA520;
-            position: absolute;
-            top: 0px;
-            left: -12px;
-            border-radius:50%;
-            border: 5px solid #844200;
-        }
-        /*右胳膊*/
-        .arm_right {
-            width: 25px;
-            height: 25px;
-            background: #DAA520;
-            position: absolute;
-            top: -15px;
-            z-index: 2;
-            left: 75px;
-            border-radius:50%;
-            border: 5px solid #844200;
-        }
-        /*左腿*/
-        .leg_left {
-            position: absolute;
-            width: 20px;
-            height: 40px;
-            border: 5px solid #844200;
-            background: #DAA520;
-            top: 200px;
-            left: 220px;
-            transform: rotate(10deg);
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-        /*右腿*/
-        .leg_right {
-            position: absolute;
-            width: 20px;
-            height: 40px;
-            border: 5px solid #844200;
-            background: #DAA520;
-            top: 200px;
-            left: 250px;
-            transform: rotate(-10deg);
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-        /*尾巴上*/
-        .tail1 {
-            width: 10px;
-            height: 50px;
-            -webkit-transform: skew(20deg);
-            transform: skew(20deg);
-            border: 5px solid #844200;
-            background: #DAA520;
-            position: absolute;
-            top: -50px;
-            left: 170px;
-        }
-        .tail1:after{
-            content: "";
-            width: 10px;
-            height: 50px;
-            -webkit-transform: skew(-10deg);
-            transform: skew(-10deg);
-            border: 5px solid #844200;
-            background: #DAA520;
-            position: absolute;
-            top: -20px;
-            left: 50px;
-        }
-        /*尾巴中*/
-        .tail2 {
-            width: 10px;
-            height: 50px;
-            border: 5px solid #844200;
-            background: #DAA520;
-            position: absolute;
-            -webkit-transform: rotate(70deg);
-            top: 124px;
-            left: 160px;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-        .tail2:after{
-            content: "";
-            width: 10px;
-            height: 50px;
-            background: #DAA520;
-            position: absolute;
-            -webkit-transform: rotate(70deg);
-            top: -100px;
-            left: -100px;
-            z-index: 50;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-        }
-        /*尾巴下*/
-        .tail3 {
-            width: 10px;
-            height: 50px;
-            border: 5px solid #844200;
-            background: #DAA520;
-            position: absolute;
-            top: 140px;
-            -webkit-transform: rotate(-30deg);
-            left: 180px;
-        }
-        /*尾巴阴影*/
-        .tail_shading {
-            width: 29px;
-            height: 183px;
-            -webkit-transform: skew(16deg);
-            transform: skew(16deg);
-            background: #ffe100;
-            position: absolute;
-            top: 113px;
-            left: 118px;
-        }
-        /*尾巴摇摆*/
-        .tail{
-            -webkit-animation:tail 0.2s ease-in-out infinite;
-            animation:tail 0.2s ease-in-out infinite;
-        }
-        /*/!*吐舌头*!/*/
-        /*@-webkit-keyframes tongue{*/
-            /*0%{*/
-                /*height: 3px;*/
-            /*}*/
-            /*30%{*/
-                /*width: 20px;*/
-                /*height: 36px;*/
-            /*}*/
-            /*100%{*/
-                /*height: 3px;*/
-            /*}*/
-        /*}*/
-        /*/!*吐舌头*!/*/
-        /*@keyframes tongue{*/
-            /*0%{*/
-                /*height: 3px;*/
-            /*}*/
-            /*30%{*/
-                /*width: 20px;*/
-                /*height: 36px;*/
-            /*}*/
-            /*100%{*/
-                /*height: 3px;*/
-            /*}*/
-        /*}*/
-        /*/!*尾巴摇摆动画*!/*/
-        /*@-webkit-keyframes tail{*/
-            /*0%{*/
-                /*-webkit-transform-origin: 250px 300px;*/
-                /*-webkit-transform: rotateZ(0deg);*/
-            /*}*/
-            /*60%{*/
-                /*-webkit-transform-origin:250px 300px;*/
-                /*-webkit-transform: rotateZ(10deg);*/
-            /*}*/
-            /*100%{*/
-                /*-webkit-transform-origin:250px 300px;*/
-                /*-webkit-transform: rotateZ(0deg);*/
-            /*}*/
-        /*}*/
-        /*/!*尾巴摇摆动画*!/*/
-        /*@keyframes tail{*/
-            /*0%{*/
-                /*transform-origin: 250px 300px;*/
-                /*transform: rotateZ(0deg);*/
-            /*}*/
-            /*60%{*/
-                /*transform-origin:250px 300px;*/
-                /*transform: rotateZ(10deg);*/
-            /*}*/
-            /*100%{*/
-                /*transform-origin:250px 300px;*/
-                /*transform: rotateZ(0deg);*/
-            /*}*/
-        /*}*/
-    </style>
-
+    <title>个人简历</title>
+    <link rel="stylesheet" href="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-<!--视图框-->
-    <h1>我的简历</h1>
-<div id="view">
-    <!--皮卡丘-->
-    <div id="pikachu">
-        <!--尾巴-->
-        <div class="tail">
-            <div class="tail3"></div>
-            <div class="tail2"></div>
-            <div class="tail1"></div>
-        </div>
-        <!--尾巴结束-->
-        <!--耳朵-->
-        <div class="ear">
-            <div class="ear_left"></div>
-            <div class="ear_right"></div>
-            <div class="ear_shading_left"></div>
-            <div class="ear_shading_right"></div>
-        </div>
-        <!--耳朵结束-->
-        <!--腿-->
-        <div class="leg">
-            <div class="leg_left"></div>
-            <div class="leg_right"></div>
-        </div>
-        <!--腿结束-->
-        <!--身体-->
-        <div id="body">
-            <div class="arm_left"></div>
-            <div class="arm_right"></div>
-        </div>
-        <!--身体结束-->
-        <!--头-->
-        <div id="head">
-            <!--脸蛋-->
-            <div class="face_left"></div>
-            <div class="face_right"></div>
-            <!--眼睛-->
-            <div class="eye_left">
-                <!--眼白-->
-                <div class="eye_shading_left"></div>
-                <div class="eye_shading_left1"></div>
-                <div class="eye_shading_left2"></div>
+<div class="main">
+    <header class="header">
+        <div class="container">
+            <div class="head-title">
+                <img src="img/portrait.JPG" class="title-img">
+                <h1>qkxin</h1>
+                <h2>点击下面了解更多</h2>
             </div>
-            <div class="eye_right">
-                <!--眼白-->
-                <div class="eye_shading_right"></div>
-            </div>
-            <!--眼睛结束-->
-            <!--嘴巴-->
-            <div class="mouth_left"></div>
-            <div class="mouth_right"></div>
-            <!--舌头-->
-            <div class="tongue"></div>
-            <!--鼻子-->
         </div>
-        <!--头结束-->
+    </header>
+    <div class="information">
+        <div class="container">
+            <div class="row">
+                <p>个人资料</p>
+                <div class="col-md-4 col-sm-6">姓名：秦可欣</div>
+                <div class="col-md-4 col-sm-6">性别：女</div>
+                <div class="col-md-4 col-sm-6">籍贯：黑龙江</div>
+                <div class="col-md-4 col-sm-6">出生年月：1995.12</div>
+                <div class="col-md-4 col-sm-6">政治面貌：党员</div>
+                <div class="col-md-4 col-sm-6">民族：汉</div>
+                <div class="col-md-4 col-sm-6">工作经验：1.5年</div>
+                <div class="col-md-4 col-sm-6">求职意向：Web前端</div>
+            </div>
+            <div class="row">
+                <p>关于自己</p>
+                <h5>本人诚实守信，工作严谨踏实，认真负责，处事机灵。拥有积极向上的生活态度和广泛的兴趣爱好,具有良好的心理素质和吃苦耐劳精神，对事有自己的见解，并有较强的共事协作能力。</h5>
+                <h5>从事本行业是自己想去做的事情 “ 将来的我，一定会感谢现在拼命的自己 ” </h5>
+            </div>
+        </div>
     </div>
-    <!--皮卡丘结束-->
+    <div class="skill">
 
+    </div>
+    <div class="experience">
+
+    </div>
+    <div class="project">
+
+    </div>
 </div>
-<!--视图框结束-->
 </body>
-
+<script>
+    $(function () {
+        var h = $(window).height();
+        $(".header").height(h);
+    })
+</script>
 </html>

@@ -1,0 +1,97 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background-attachment: fixed;
+}
+
+.header {
+    width: 100%;
+    background-color: #000;
+    /*background: url(../img/bg1.jpg) center center no-repeat;*/
+    /*background-attachment: fixed;*/
+    text-align: center;
+    position: relative;
+}
+
+.header .head-title .title-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 200px;
+    margin-top: 8%;
+}
+.header .head-title  h1 {
+    font-size: 50px;
+    line-height: 60px;
+    color: #fff;
+    font-family: "Times New Roman"
+}
+.header .head-title  h2 {
+    position: absolute;
+    bottom: 20px;
+    font-size: 20px;
+    line-height: 40px;
+    color: #fff;
+    text-align: center;
+}
+.header .head-title  h2:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.main > div {
+    min-height: 500px;
+}
+
+.main .information {
+    background: url(../img/bg4.jpg) center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main .information .row {
+    margin: 0;
+    padding: 60px 0;
+}
+
+.main .information .row > p {
+    font-size: 30px;
+    line-height: 40px;
+    margin: 20px 0;
+    padding: 0 10px;
+    color: #fff;
+    border-left: 4px solid #fedc32
+}
+.main .information .row > h5 {
+    font-size: 24px;
+    color: #fff;
+    padding: 5px 0;
+    line-height: 30px;
+}
+.main .information .row .col-md-4 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+    padding: 5px 0;
+}
+
+.main .skill {
+    /*background-color: #000;*/
+    background: url(../img/bg1.jpg) center center no-repeat;
+    background-attachment: fixed;
+}
+
+.main .experience {
+    background: url(../img/bg4.jpg) center center no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.main .project {
+    background-color: #000;
+    /*background: url(../img/bg1.jpg) center center no-repeat;*/
+    /*background-attachment: fixed;*/
+}
