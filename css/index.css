@@ -12,8 +12,6 @@ body, html {
 .header {
     width: 100%;
     background-color: #000;
-    /*background: url(../img/bg1.jpg) center center no-repeat;*/
-    /*background-attachment: fixed;*/
     text-align: center;
     position: relative;
 }
@@ -24,13 +22,15 @@ body, html {
     border-radius: 200px;
     margin-top: 8%;
 }
-.header .head-title  h1 {
+
+.header .head-title h1 {
     font-size: 50px;
     line-height: 60px;
     color: #fff;
     font-family: "Times New Roman"
 }
-.header .head-title  h2 {
+
+.header .head-title h2 {
     position: absolute;
     bottom: 20px;
     font-size: 20px;
@@ -38,10 +38,12 @@ body, html {
     color: #fff;
     text-align: center;
 }
-.header .head-title  h2:hover{
+
+.header .head-title h2:hover {
     cursor: pointer;
     text-decoration: underline;
 }
+
 .main > div {
     min-height: 500px;
 }
@@ -51,26 +53,32 @@ body, html {
     background-attachment: fixed;
     background-size: cover;
 }
-
+.main .information .container {
+    border: none;
+}
 .main .information .row {
     margin: 0;
     padding: 60px 0;
+}
+.main .information a {
+    text-decoration: none;
 }
 
 .main .information .row > p {
     font-size: 30px;
     line-height: 40px;
-    margin: 20px 0;
     padding: 0 10px;
     color: #fff;
-    border-left: 4px solid #fedc32
+    border-left: 4px solid #fedc32;
 }
+
 .main .information .row > h5 {
     font-size: 24px;
     color: #fff;
     padding: 5px 0;
     line-height: 30px;
 }
+
 .main .information .row .col-md-4 {
     font-size: 24px;
     line-height: 30px;
@@ -79,9 +87,36 @@ body, html {
 }
 
 .main .skill {
-    /*background-color: #000;*/
+    height: 100%;
     background: url(../img/bg1.jpg) center center no-repeat;
     background-attachment: fixed;
+}
+
+.main .skill .container {
+    padding: 60px 15px;
+    background: rgba(0, 0, 0, 0.6);
+    height: 100%;
+}
+
+.main .skill .container > p {
+    color: #fff;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 20px 0;
+    padding: 0 10px;
+    border-left: 4px solid rgb(51, 122, 183);
+}
+
+.main .skill .container > h5 {
+    font-size: 24px;
+    line-height: 30px;
+    color: #fff;
+    padding: 5px 0;
+}
+
+.main .skill .container .row {
+    margin: 0;
+    padding: 30px 0;
 }
 
 .main .experience {
@@ -90,8 +125,91 @@ body, html {
     background-size: cover;
 }
 
+.main .experience .container > p {
+    color: #fff;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 20px 0;
+    padding: 0 10px;
+    border-left: 4px solid #fedc32;
+}
+.main .experience .container .row{
+    font-size: 20px;
+    line-height: 25px;
+    color: #fff;
+    padding: 5px 0;
+}
+.main .experience .container .time-sm{
+    padding: 15px;
+}
+.main .experience .container .work-detail{
+    padding: 20px 0 0 15px;
+}
+.main .experience .container .work-detail p span{
+    font-size: 16px;
+    color: #999;
+    padding: 0 10px;
+}
 .main .project {
     background-color: #000;
-    /*background: url(../img/bg1.jpg) center center no-repeat;*/
-    /*background-attachment: fixed;*/
+}
+.main .project .container > p{
+    color: #fff;
+    font-size: 30px;
+    line-height: 40px;
+    margin: 20px 0;
+    padding: 0 10px;
+    border-left: 4px solid rgb(51, 122, 183);
+}
+.main .project .container .row > div{
+    margin-bottom: 20px;
+}
+.main .project .container .row .content{
+    border: 1px solid #fff;
+    padding: 20px;
+}
+.main .project .container .row .background-style{
+    padding-bottom: 66%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.main .project .container .row a{
+    font-size: 18px;
+    display: block;
+    padding-top: 10px;
+    line-height: 20px;
+}
+.main .project .container .row .background-style:hover{
+    -webkit-animation: warn 2s ease-out;
+    -moz-animation: warn 2s ease-out;
+    -ms-animation: warn 2s ease-out;
+    animation: warn 2s ease-out;
+}
+@-webkit-keyframes warn {
+    0%{
+        -webkit-transform: scale(1);
+    }
+    25%{
+        -webkit-transform: scale(0.8);
+    }
+    50%{
+        -webkit-transform: scale(0.6);
+    }
+    75%{
+        -webkit-transform: scale(0.8);
+    }
+    100%{
+        -webkit-transform: scale(1);
+
+    }
+}
+/*bootstrap*/
+.progress {
+    height: 24px;
+}
+
+.progress-bar {
+    font-size: 14px;
+    line-height: 24px;
 }
