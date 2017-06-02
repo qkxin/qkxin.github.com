@@ -7,33 +7,52 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
     <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.fullPage.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+        $(function () {
+            $('#dowebok').fullpage({
+//            sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE', '#f90'],
+                anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+                menu: '#menu'
+            });
+        })
+    </script>
 </head>
 <body>
-<div class="main">
-    <header class="header">
+<ul id="menu">
+    <li data-menuanchor="page1" class="active"><a href="#page1">个人简历</a></li>
+    <li data-menuanchor="page2"><a href="#page2">个人资料</a></li>
+    <li data-menuanchor="page3"><a href="#page3">技能特长</a></li>
+    <li data-menuanchor="page4"><a href="#page4">工作经历</a></li>
+    <li data-menuanchor="page5"><a href="#page5">项目经验</a></li>
+</ul>
+<div class="main" id="dowebok">
+    <header class="header section">
         <div class="container">
             <div class="head-title">
-                <img src="img/portrait.JPG" class="title-img">
-                <h1>qkxin</h1>
-                <a href="#more">点击下面了解更多</a>
+                <p>喜欢前端的伙伴们</p>
+                <p>我是一个来自黑龙江的女孩</p>
+                <p>很高兴您正在看我的资料</p>
+                <p>那就请您看完吧！</p>
+                <a href="#page2">点击下面了解更多</a>
             </div>
         </div>
     </header>
-    <div class="information">
+    <div class="information section">
         <a href="#" name="more">
             <div class="container">
                 <div class="row">
                     <p>个人资料</p>
-                    <div class="col-md-4 col-sm-6">姓名：秦可欣</div>
-                    <div class="col-md-4 col-sm-6">性别：女</div>
-                    <div class="col-md-4 col-sm-6">籍贯：黑龙江</div>
-                    <div class="col-md-4 col-sm-6">出生年月：1995.12</div>
-                    <div class="col-md-4 col-sm-6">政治面貌：党员</div>
-                    <div class="col-md-4 col-sm-6">邮箱：473983210@qq.com</div>
-                    <div class="col-md-4 col-sm-6">工作经验：1.5年</div>
-                    <div class="col-md-4 col-sm-6">求职意向：Web前端</div>
-                    <div class="col-md-4 col-sm-6">联系方式：17816866263</div>
+                    <div class="col-md-4">姓名：秦可欣</div>
+                    <div class="col-md-4">性别：女</div>
+                    <div class="col-md-4">籍贯：黑龙江</div>
+                    <div class="col-md-4">出生年月：1995.12</div>
+                    <div class="col-md-4">政治面貌：党员</div>
+                    <div class="col-md-4">邮箱：473983210@qq.com</div>
+                    <div class="col-md-4">工作经验：1.5年</div>
+                    <div class="col-md-4">求职意向：Web前端</div>
+                    <div class="col-md-4">联系方式：17816866263</div>
                 </div>
                 <div class="row">
                     <p>关于自己</p>
@@ -43,7 +62,7 @@
             </div>
         </a>
     </div>
-    <div class="skill">
+    <div class="skill section">
         <div class="container">
             <p>技能特长</p>
             <h5>1 .网页制作技术，熟悉页面架构和布局。</h5>
@@ -135,7 +154,7 @@
             </div>
         </div>
     </div>
-    <div class="experience">
+    <div class="experience section">
         <div class="container">
             <p>工作经历</p>
             <div class="row">
@@ -158,14 +177,14 @@
             </div>
         </div>
     </div>
-    <div class="project">
+    <div class="project section">
         <div class="container">
             <p>项目经验</p>
             <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <a href="http://www.kidcares.cn/">
                         <div class="content">
-                            <div class="background-style" style="background:url(img/bg2.jpg)"></div>
+                            <div class="background-style" style="background:url(img/pink.jpg)"></div>
                             <a href="http://www.kidcares.cn/">http://www.kidcares.cn</a>
                         </div>
                     </a>
@@ -173,7 +192,7 @@
                 <div class="col-md-4 col-sm-6">
                     <a href="http://edutest.kidcares.cn">
                         <div class="content">
-                            <div class="background-style" style="background:url(img/bg2.jpg)"></div>
+                            <div class="background-style" style="background:url(img/pink.jpg)"></div>
                             <a href="http://edutest.kidcares.cn">http://edutest.kidcares.cn</a>
                         </div>
                     </a>
@@ -181,7 +200,7 @@
                 <div class="col-md-4 col-sm-6">
                     <a href="http://live.busionline.com">
                         <div class="content">
-                            <div class="background-style" style="background:url(img/bg2.jpg)"></div>
+                            <div class="background-style" style="background:url(img/pink.jpg)"></div>
                             <a href="http://live.busionline.com">http://live.busionline.com</a>
                         </div>
                     </a>
@@ -189,7 +208,7 @@
                 <div class="col-md-4 col-sm-6">
                     <a href="http://edu.busionline.com">
                         <div class="content">
-                            <div class="background-style" style="background:url(img/bg2.jpg)"></div>
+                            <div class="background-style" style="background:url(img/pink.jpg)"></div>
                             <a href="http://edu.busionline.com">http://edu.busionline.com</a>
                         </div>
                     </a>
@@ -197,7 +216,7 @@
                 <div class="col-md-4 col-sm-6">
                     <a href="http://edu.busionline.com">
                         <div class="content">
-                            <div class="background-style" style="background:url(img/bg2.jpg)"></div>
+                            <div class="background-style" style="background:url(img/pink.jpg)"></div>
                             <a href="http://www.hzwotu.com">http://www.hzwotu.com</a>
                         </div>
                     </a>
@@ -207,10 +226,5 @@
     </div>
 </div>
 </body>
-<script>
-    $(function () {
-        var h = $(window).height();
-        $(".header").height(h);
-    })
-</script>
+
 </html>
